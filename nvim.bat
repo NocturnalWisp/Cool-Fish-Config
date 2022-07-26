@@ -1,1 +1,1 @@
-start nvim-qt & exit
+start nvim-qt %* & exit
