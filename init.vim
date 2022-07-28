@@ -5,17 +5,20 @@ filetype plugin indent on
 let g:ale_disable_lsp = 1
 
 " rust
-let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rainbow_active = 1
 let g:gitgutter_terminal_reports_focus=0
+let g:termdebugger="rust-gdb"
+let g:rooter_patterns = ['.git', 'Makefile', 'package.json']
+
+let g:ag_working_path_mode="r"
 
 call plug#begin('C:\Users\helmt\AppData\Local\nvim\autoload\plugged')
 
-Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rust-lang/rust.vim'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
@@ -23,6 +26,7 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'dense-analysis/ale'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'https://tpope.io/vim/fugitive.git'
 
@@ -41,6 +45,10 @@ Plug 'https://tpope.io/vim/surround.git'
 
 Plug 'anuvyklack/pretty-fold.nvim'
 Plug 'anuvyklack/nvim-keymap-amend'
+
+Plug 'cohama/agit.vim'
+Plug 'airblade/vim-rooter'
+Plug 'simeji/winresizer'
 
 call plug#end()
 
@@ -72,18 +80,29 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-codeaction)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
-nmap <F1> :CHADopen<CR>
-nmap <F2> :below 20sp <CR> \| :term<CR> \| <Esc>i
-:imap jj <Esc>
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+nmap <c-F> ;Ag<cr>
+nmap <F1> ;CHADopen<CR>
+nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
+nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
+:imap ;; <Esc>
+:colorscheme nightfox
 
 set number
 set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set hidden
+set autoread
+set clipboard=unnamedplus
 
-:colorscheme nightfox
 let g:chadtree_settings = { 'theme.icon_glyph_set': "devicons" }
 
 lua require('neoscroll').setup()
