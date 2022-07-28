@@ -50,6 +50,8 @@ Plug 'cohama/agit.vim'
 Plug 'airblade/vim-rooter'
 Plug 'simeji/winresizer'
 
+Plug 'Lenovsky/nuake'
+
 call plug#end()
 
 inoremap <silent><expr> <TAB>
@@ -89,10 +91,14 @@ vnoremap : ;
 
 nmap <c-F> ;Ag<cr>
 nmap <F1> ;CHADopen<CR>
-nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
+" nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
 nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
 :imap ;; <Esc>
 :colorscheme nightfox
+
+nnoremap <F2> ;Nuake<CR>
+inoremap <F2> <C-\><C-n>;Nuake<CR>
+tnoremap <F2> <C-\><C-n>;Nuake<CR>
 
 set number
 set relativenumber
