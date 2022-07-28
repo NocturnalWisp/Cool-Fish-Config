@@ -96,9 +96,9 @@ nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
 :imap ;; <Esc>
 :colorscheme nightfox
 
-nnoremap <F2> ;Nuake<CR>
-inoremap <F2> <C-\><C-n>;Nuake<CR>
-tnoremap <F2> <C-\><C-n>;Nuake<CR>
+nnoremap <F2> :Nuake<CR>
+inoremap <F2> :Nuake<CR>
+tnoremap <F2> <C-\><C-n>
 
 set number
 set relativenumber
