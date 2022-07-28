@@ -92,6 +92,7 @@ vnoremap : ;
 nmap <c-F> ;Ag<cr>
 nmap <F1> ;CHADopen<CR>
 " nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
+nmap <C-P> ;FZF<CR>
 nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
 :imap ;; <Esc>
 :colorscheme nightfox
