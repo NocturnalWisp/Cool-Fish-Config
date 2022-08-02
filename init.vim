@@ -14,6 +14,8 @@ let g:rooter_patterns = ['.git', 'Makefile', 'package.json']
 
 let g:ag_working_path_mode="r"
 
+let g:winresizer_start_key = '<A-r>'
+
 call plug#begin('C:\Users\helmt\AppData\Local\nvim\autoload\plugged')
 
 Plug 'OmniSharp/omnisharp-vim'
@@ -89,10 +91,10 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
-nmap <c-F> ;Ag<cr>
+nmap <A-F> ;Ag<cr>
 nmap <F1> ;CHADopen<CR>
 " nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
-nmap <C-P> ;FZF<CR>
+nmap <C-P> ;GFiles<CR>
 nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
 :imap ;; <Esc>
 :colorscheme nightfox
@@ -114,3 +116,7 @@ let g:chadtree_settings = { 'theme.icon_glyph_set': "devicons" }
 
 lua require('neoscroll').setup()
 lua require('pretty-fold').setup()
+
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
