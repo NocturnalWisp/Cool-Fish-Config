@@ -96,7 +96,7 @@ nmap <F1> ;CHADopen<CR>
 " nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
 nmap <C-P> ;GFiles<CR>
 nnoremap <C-a-c> ;source C:/Users/helmt/AppData/Local/nvim/init.vim<cr>
-:imap ;; <Esc>
+:imap jj <Esc>
 :colorscheme nightfox
 
 nnoremap <F2> :Nuake<CR>
