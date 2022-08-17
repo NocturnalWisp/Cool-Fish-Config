@@ -20,7 +20,6 @@ call plug#begin('C:\Users\helmt\AppData\Local\nvim\autoload\plugged')
 
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rust-lang/rust.vim'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
@@ -29,8 +28,6 @@ Plug 'dense-analysis/ale'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-Plug 'https://tpope.io/vim/fugitive.git'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -43,12 +40,9 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'karb94/neoscroll.nvim'
-Plug 'https://tpope.io/vim/surround.git'
 
-Plug 'anuvyklack/pretty-fold.nvim'
 Plug 'anuvyklack/nvim-keymap-amend'
 
-Plug 'cohama/agit.vim'
 Plug 'airblade/vim-rooter'
 Plug 'simeji/winresizer'
 
@@ -115,7 +109,6 @@ set clipboard=unnamedplus
 let g:chadtree_settings = { 'theme.icon_glyph_set': "devicons" }
 
 lua require('neoscroll').setup()
-lua require('pretty-fold').setup()
 
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
