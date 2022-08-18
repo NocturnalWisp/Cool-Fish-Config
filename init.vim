@@ -5,6 +5,9 @@ filetype plugin indent on
 let g:ale_disable_lsp = 1
 
 " rust
+nnoremap <SPACE> <Nop>
+nnoremap <tab> <Nop>
+let mapleader=" "
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rainbow_active = 1
@@ -85,7 +88,7 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
-nmap <A-F> ;Ag<cr>
+nmap <leader>f ;Ag<cr>
 nmap <F1> ;CHADopen<CR>
 " nmap <F2> ;below 20sp <CR> \| ;term<CR> \| <Esc>i
 nmap <C-P> ;GFiles<CR>
